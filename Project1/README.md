@@ -42,3 +42,4 @@ sc start <ServiceName>
 ```
 - Thực hiện debug trên WinDBG
 ## POC
+![Minh họa](images/photo_2024-12-02_23-29-56.jpg "Ảnh minh họa")
