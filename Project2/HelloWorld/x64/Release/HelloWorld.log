@@ -1,0 +1,22 @@
+﻿  Building 'HelloWorld' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  Stamping x64\Release\HelloWorld.inf
+  Stamping [Version] section with DriverVer=12/09/2024,9.57.57.417
+  main.cpp
+  HelloWorld.vcxproj -> C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\Setup_Project\HelloWorld\x64\Release\HelloWorld.sys
+  Done Adding Additional Store
+  Successfully signed: C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\Setup_Project\HelloWorld\x64\Release\HelloWorld.sys
+  
+  .........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\Setup_Project\HelloWorld\x64\Release\HelloWorld\helloworld.cat
+  Done Adding Additional Store
+  Successfully signed: C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\Setup_Project\HelloWorld\x64\Release\HelloWorld\helloworld.cat
+  
