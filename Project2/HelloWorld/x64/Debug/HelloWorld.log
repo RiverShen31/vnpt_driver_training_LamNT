@@ -1,6 +1,6 @@
 ﻿  Building 'HelloWorld' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
   Stamping x64\Debug\HelloWorld.inf
-  Stamping [Version] section with DriverVer=12/10/2024,22.10.0.990
+  Stamping [Version] section with DriverVer=12/11/2024,10.52.21.309
   main.cpp
   HelloWorld.vcxproj -> C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\Setup_Project\HelloWorld\x64\Debug\HelloWorld.sys
   Done Adding Additional Store

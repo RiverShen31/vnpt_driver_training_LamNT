@@ -1,9 +1,48 @@
 ﻿#include <ntddk.h>
+#include <ntstrsafe.h>
 
 #define IOCTL_TEST CTL_CODE(FILE_DEVICE_UNKNOWN, 0x1337, METHOD_BUFFERED, FILE_ANY_ACCESS)
 
 UNICODE_STRING DeviceName, SymbolicLinkName;
 PDEVICE_OBJECT DeviceObject;
+
+char globalInput[256] = { 0 };
+
+NTSTATUS FUNC_IRP_MJ_READ(PDEVICE_OBJECT DriverObject, PIRP Irp) {
+	UNREFERENCED_PARAMETER(DriverObject);
+
+	PIO_STACK_LOCATION stack = IoGetCurrentIrpStackLocation(Irp);
+	ULONG lengthToRead = stack->Parameters.Read.Length;
+	UCHAR* buffer = (UCHAR*)MmGetSystemAddressForMdlSafe(Irp->MdlAddress, NormalPagePriority);
+
+	LARGE_INTEGER systemTime;
+	KeQuerySystemTime(&systemTime);
+
+	// Thời gian UNIX (epoch time)
+	UINT64 unixTime = (UINT64)((systemTime.QuadPart - 116444736000000000LL) / 10000000LL);
+
+	// Format timestamp và dữ liệu từ globalInput
+	char timestamp[64] = { 0 };
+	RtlStringCchPrintfA(timestamp, sizeof(timestamp), "%llu", unixTime);
+
+	char combinedOutput[512] = { 0 };  // Đảm bảo đủ lớn để chứa timestamp + dữ liệu
+	RtlStringCchPrintfA(combinedOutput, sizeof(combinedOutput), "[%s] %s", timestamp, globalInput);
+
+	
+
+	// Copy dữ liệu vào buffer (dọn dẹp trước)
+	RtlZeroMemory(buffer, lengthToRead);
+	size_t copyLength = min(lengthToRead, strlen(combinedOutput));
+	RtlCopyMemory(buffer, combinedOutput, copyLength);
+
+	// Thiết lập thông tin trả về
+	Irp->IoStatus.Status = STATUS_SUCCESS;
+	Irp->IoStatus.Information = copyLength;  // Thiết lập số byte đã sao chép
+
+	// Hoàn tất IRP
+	IoCompleteRequest(Irp, IO_NO_INCREMENT);
+	return STATUS_SUCCESS;
+}
 
 NTSTATUS FUNC_IRP_FILTER(PDEVICE_OBJECT DriverObject, PIRP Irp)
 {
@@ -42,6 +81,8 @@ NTSTATUS FUNC_IRP_MJ_DEVICE_CONTROL(PDEVICE_OBJECT DriverObject, PIRP Irp)
 			SIZE_T copyLength = min(inputBufferLength, sizeof(msg) - 1);
 			RtlZeroMemory(msg, sizeof(msg));
 			RtlCopyMemory(msg, buffer, copyLength);
+			RtlZeroMemory(globalInput, sizeof(globalInput));
+			RtlCopyMemory(globalInput, buffer, copyLength);
 			msg[copyLength] = '\0'; // Đảm bảo null-terminated
 
 			// Sao chép lại chuỗi nhận được vào buffer để gửi trả lại
@@ -97,14 +138,18 @@ NTSTATUS DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath)
 		&DeviceName,
 		FILE_DEVICE_UNKNOWN,
 		FILE_DEVICE_SECURE_OPEN,
-		FALSE,
+		TRUE,
 		&DeviceObject);
+
 
 	if (!NT_SUCCESS(status))
 	{
 		DbgPrint("IoCreateDevice failed.\n");
 		return status;
 	}
+
+	DeviceObject->Flags |= DO_DIRECT_IO;
+
 
 	status = IoCreateSymbolicLink(&SymbolicLinkName, &DeviceName);
 
@@ -119,8 +164,9 @@ NTSTATUS DriverEntry(PDRIVER_OBJECT DriverObject, PUNICODE_STRING RegistryPath)
 		DriverObject->MajorFunction[i] = FUNC_IRP_FILTER;
 
 	DriverObject->DriverUnload = DriverUnload;
+	DriverObject->MajorFunction[IRP_MJ_READ] = FUNC_IRP_MJ_READ;
 	DriverObject->MajorFunction[IRP_MJ_DEVICE_CONTROL] = FUNC_IRP_MJ_DEVICE_CONTROL;
-
+	
 	DbgPrint("Initialized driver.\n");
 
 	return STATUS_SUCCESS;
