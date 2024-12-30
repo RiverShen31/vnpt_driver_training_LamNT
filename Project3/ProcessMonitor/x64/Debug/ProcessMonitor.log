@@ -1,0 +1,22 @@
+﻿  Building 'ProcessMonitor' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  Stamping x64\Debug\ProcessMonitor.inf
+  Stamping [Version] section with DriverVer=12/30/2024,8.6.16.339
+  SysMon.cpp
+  ProcessMonitor.vcxproj -> C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\Setup_Project\ProcessMonitor\x64\Debug\ProcessMonitor.sys
+  Done Adding Additional Store
+  Successfully signed: C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\Setup_Project\ProcessMonitor\x64\Debug\ProcessMonitor.sys
+  
+  .........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\Setup_Project\ProcessMonitor\x64\Debug\ProcessMonitor\processmonitor.cat
+  Done Adding Additional Store
+  Successfully signed: C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\Setup_Project\ProcessMonitor\x64\Debug\ProcessMonitor\processmonitor.cat
+  
