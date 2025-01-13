@@ -7,6 +7,7 @@ enum ChanGhi {
 	allowWrite
 };
 
+
 enum ChanDelete {
 	denyDelete,
 	allowDelete

@@ -10,6 +10,7 @@ enum ChanGhi {
     allowWrite
 };
 
+
 enum ChanDelete {
     denyDelete,
     allowDelete
@@ -23,6 +24,9 @@ enum ACTION {
     Create,
     Open,
     Delete,
+    DenyCreate,
+    DenyWrite,
+    DenyDelete,
 };
 
 struct FileAccessPortMessage {
@@ -34,7 +38,7 @@ struct FileAccessPortMessage {
 
 #pragma comment(lib, "fltlib")
 
-// Hàm ??nh d?ng th?i gian
+// HÃ m ??nh d?ng th?i gian
 std::string GetFormattedTime(const LARGE_INTEGER& time) {
     FILETIME local;
     FileTimeToLocalFileTime((FILETIME*)&time, &local);
@@ -45,7 +49,7 @@ std::string GetFormattedTime(const LARGE_INTEGER& time) {
     return std::string(buffer);
 }
 
-// Hàm l?y tên hành ??ng t? enum ACTION
+// HÃ m l?y tÃªn hÃ nh ??ng t? enum ACTION
 std::string GetActionName(ACTION action) {
     switch (action) {
     case ACTION::Connect: return "CONNECT";
@@ -59,7 +63,7 @@ std::string GetActionName(ACTION action) {
     }
 }
 
-// Hàm chuy?n ??i NT Name sang DOS Name
+// HÃ m chuy?n ??i NT Name sang DOS Name
 std::wstring GetDosNameFromNTName(PCWSTR path) {
     if (path[0] != L'\\')
         return path;
@@ -79,7 +83,7 @@ std::wstring GetDosNameFromNTName(PCWSTR path) {
         }
     }
 
-    // Tìm ph?n volume t? NT path
+    // TÃ¬m ph?n volume t? NT path
     const WCHAR* restPath = wcschr(path + 1, L'\\');
     if (!restPath)
         return path;
@@ -93,23 +97,23 @@ std::wstring GetDosNameFromNTName(PCWSTR path) {
     return path;
 }
 
-// Hàm x? lý tin nh?n
+// HÃ m x? lÃ½ tin nh?n
 void HandleMessage(const BYTE* buffer) {
     auto msg = (FileAccessPortMessage*)buffer;
     std::string timeStr = GetFormattedTime(msg->Time);
     std::string actionName = GetActionName(msg->Action);
     std::wstring filename(msg->FileName, msg->FileNameLength); // Chuy?n ??i t? byte sang wchar_t
 
-    // In thông tin hành ??ng
+    // In thÃ´ng tin hÃ nh ??ng
     printf("[%s][%s][C:] %ws\n", timeStr.c_str(), actionName.c_str(), GetDosNameFromNTName(msg->FileName).c_str());
 }
 
 std::wstring SimplifyNTPath(const std::wstring& ntPath) {
     const std::wstring devicePrefix = L"\\Device";
     if (ntPath.rfind(devicePrefix, 0) == 0) { // Ki?m tra n?u ???ng d?n b?t ??u b?ng "\Device"
-        return L"\\" + ntPath.substr(devicePrefix.length() + 1); // Lo?i b? "\Device" và thêm "\"
+        return L"\\" + ntPath.substr(devicePrefix.length() + 1); // Lo?i b? "\Device" vÃ  thÃªm "\"
     }
-    return ntPath; // Tr? l?i nguyên b?n n?u không ph?i "\Device"
+    return ntPath; // Tr? l?i nguyÃªn b?n n?u khÃ´ng ph?i "\Device"
 }
 
 std::wstring ConvertToVolumePath(const std::wstring& dosPath) {
@@ -142,8 +146,8 @@ int main() {
         return 1;
     }
 
-    // ???ng d?n ng??i dùng cung c?p
-    std::wstring monitorFolder = L"C:\\Users\\hello\\Desktop";
+    // ???ng d?n ng??i dÃ¹ng cung c?p
+    std::wstring monitorFolder = L"C:\\Users\\tienl\\Desktop"; 
 
     // Convert to NT path
     std::wstring ntPath = ConvertToVolumePath(monitorFolder);
@@ -152,7 +156,7 @@ int main() {
         std::wcout << L"Converted NT Path: " << ntPath << L"\n";
     }
 
-    //// Chuy?n ??i ???ng d?n thành UNC
+    //// Chuy?n ??i ???ng d?n thÃ nh UNC
     //std::wstring uncFolder = ConvertToVolumePath(monitorFolder);
     //if (uncFolder.empty()) {
     //    printf("Failed to convert to UNC path\n");
@@ -161,7 +165,7 @@ int main() {
 
     //printf("Converted UNC Path: %ws\n", uncFolder.c_str());
 
-    // C?u trúc g?i xu?ng Kernel Mode
+    // C?u trÃºc g?i xu?ng Kernel Mode
     struct {
         USHORT Length;
         WCHAR Buffer[260];
@@ -172,9 +176,9 @@ int main() {
     messageAction.Length = (USHORT)(ntPath.length() * sizeof(WCHAR));
     memcpy(messageAction.Buffer, ntPath.c_str(), messageAction.Length);
     messageAction.Buffer[messageAction.Length / sizeof(WCHAR)] = L'\0'; // Null terminate
-    messageAction.ActionGhi = ChanGhi::denyWrite;
-    messageAction.ActionDelete = ChanDelete::denyDelete;
     printf("TEST");
+    messageAction.ActionDelete = ChanDelete::denyDelete;
+    messageAction.ActionGhi = ChanGhi::denyWrite;
 
     DWORD testBytesRetuned = 0;
     hr = FilterSendMessage(hPort, &messageAction, sizeof(messageAction), nullptr, 0, &testBytesRetuned);
@@ -185,16 +189,15 @@ int main() {
         printf("Message sent successfully! Bytes returned: %lu\n", testBytesRetuned);
     }
 
-    // B? ??m ?? nh?n thông ?i?p
+    // B? ??m ?? nh?n thÃ´ng ?i?p
     BYTE buffer[4096]; // 4 KB buffer
     auto message = (FILTER_MESSAGE_HEADER*)buffer;
 
     printf("Test\n");
 
-    // Vòng l?p nh?n và x? lý tin nh?n
+    // VÃ²ng l?p nh?n vÃ  x? lÃ½ tin nh?n
     while (true) {
-        
-        printf("Tetst\n");
+
         hr = FilterGetMessage(hPort, message, sizeof(buffer), nullptr);
         if (FAILED(hr)) {
             printf("Error receiving message (HR=0x%08X)\n", hr);
