@@ -1,0 +1,10 @@
+﻿  Building 'KBackup2' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  pch.cpp
+  Driver.cpp
+  MiniFilter.cpp
+  Generating Code...
+MiniFilter.obj : error LNK2019: unresolved external symbol "public: void __cdecl Mutex::Init(void)" (?Init@Mutex@@QEAAXXZ) referenced in function "enum _FLT_POSTOP_CALLBACK_STATUS __cdecl OnPostCreate(struct _FLT_CALLBACK_DATA *,struct _FLT_RELATED_OBJECTS const *,void *,unsigned long)" (?OnPostCreate@@YA?AW4_FLT_POSTOP_CALLBACK_STATUS@@PEAU_FLT_CALLBACK_DATA@@PEBU_FLT_RELATED_OBJECTS@@PEAXK@Z)
+MiniFilter.obj : error LNK2019: unresolved external symbol "public: __cdecl FilterFileNameInformation::FilterFileNameInformation(struct _FLT_CALLBACK_DATA *,enum FileNameOptions)" (??0FilterFileNameInformation@@QEAA@PEAU_FLT_CALLBACK_DATA@@W4FileNameOptions@@@Z) referenced in function "enum _FLT_POSTOP_CALLBACK_STATUS __cdecl OnPostCreate(struct _FLT_CALLBACK_DATA *,struct _FLT_RELATED_OBJECTS const *,void *,unsigned long)" (?OnPostCreate@@YA?AW4_FLT_POSTOP_CALLBACK_STATUS@@PEAU_FLT_CALLBACK_DATA@@PEBU_FLT_RELATED_OBJECTS@@PEAXK@Z)
+MiniFilter.obj : error LNK2019: unresolved external symbol "public: __cdecl FilterFileNameInformation::~FilterFileNameInformation(void)" (??1FilterFileNameInformation@@QEAA@XZ) referenced in function "enum _FLT_POSTOP_CALLBACK_STATUS __cdecl OnPostCreate(struct _FLT_CALLBACK_DATA *,struct _FLT_RELATED_OBJECTS const *,void *,unsigned long)" (?OnPostCreate@@YA?AW4_FLT_POSTOP_CALLBACK_STATUS@@PEAU_FLT_CALLBACK_DATA@@PEBU_FLT_RELATED_OBJECTS@@PEAXK@Z)
+MiniFilter.obj : error LNK2019: unresolved external symbol "public: long __cdecl FilterFileNameInformation::Parse(void)" (?Parse@FilterFileNameInformation@@QEAAJXZ) referenced in function "bool __cdecl ShouldBackupFile(struct FilterFileNameInformation &)" (?ShouldBackupFile@@YA_NAEAUFilterFileNameInformation@@@Z)
+C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\windowskernelprogrammingbook2e\Chapter12\x64\Release\KBackup.sys : fatal error LNK1120: 4 unresolved externals
