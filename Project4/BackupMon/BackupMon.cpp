@@ -59,6 +59,9 @@ std::string GetActionName(ACTION action) {
     case ACTION::Create: return "CREATE";
     case ACTION::Open: return "OPEN";
     case ACTION::Delete: return "DELETE";
+    case ACTION::DenyWrite: return "DenyWrite";
+    case ACTION::DenyDelete: return "DenyDelete";
+    case ACTION::DenyCreate: return "DenyCreate";
     default: return "UNKNOWN";
     }
 }
@@ -147,7 +150,16 @@ int main() {
     }
 
     // ???ng d?n ng??i dùng cung c?p
-    std::wstring monitorFolder = L"C:\\Users\\tienl\\Desktop"; 
+    //std::wstring monitorFolder = L"C:\\Users\\tienl\\Desktop"; 
+
+    std::wcout << L"Enter the folder path to monitor: ";
+    std::wstring monitorFolder;
+    std::getline(std::wcin, monitorFolder);
+
+    if (monitorFolder.empty()) {
+        std::wcerr << L"Invalid input. Folder path cannot be empty.\n";
+        return 1;
+    }
 
     // Convert to NT path
     std::wstring ntPath = ConvertToVolumePath(monitorFolder);
@@ -156,16 +168,23 @@ int main() {
         std::wcout << L"Converted NT Path: " << ntPath << L"\n";
     }
 
-    //// Chuy?n ??i ???ng d?n thành UNC
-    //std::wstring uncFolder = ConvertToVolumePath(monitorFolder);
-    //if (uncFolder.empty()) {
-    //    printf("Failed to convert to UNC path\n");
-    //    return 1;
-    //}
+    // Hiển thị danh sách action cho người dùng chọn
+    std::cout << "Select actions:\n";
+    std::cout << "1. Deny Write\n";
+    std::cout << "2. Allow Write\n";
+    std::cout << "3. Deny Delete\n";
+    std::cout << "4. Allow Delete\n";
 
-    //printf("Converted UNC Path: %ws\n", uncFolder.c_str());
+    int actionWrite, actionDelete;
+    std::cout << "Enter choice for Write Action (1 or 2): ";
+    std::cin >> actionWrite;
+    std::cout << "Enter choice for Delete Action (3 or 4): ";
+    std::cin >> actionDelete;
 
-    // C?u trúc g?i xu?ng Kernel Mode
+    // Xác định action
+    ChanGhi selectedWriteAction = (actionWrite == 1) ? denyWrite : allowWrite;
+    ChanDelete selectedDeleteAction = (actionDelete == 3) ? denyDelete : allowDelete;
+
     struct {
         USHORT Length;
         WCHAR Buffer[260];
@@ -177,8 +196,8 @@ int main() {
     memcpy(messageAction.Buffer, ntPath.c_str(), messageAction.Length);
     messageAction.Buffer[messageAction.Length / sizeof(WCHAR)] = L'\0'; // Null terminate
     printf("TEST");
-    messageAction.ActionDelete = ChanDelete::denyDelete;
-    messageAction.ActionGhi = ChanGhi::denyWrite;
+    messageAction.ActionDelete = selectedDeleteAction;
+    messageAction.ActionGhi = selectedWriteAction;
 
     DWORD testBytesRetuned = 0;
     hr = FilterSendMessage(hPort, &messageAction, sizeof(messageAction), nullptr, 0, &testBytesRetuned);
