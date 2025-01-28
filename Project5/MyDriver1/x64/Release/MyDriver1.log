@@ -1,0 +1,32 @@
+﻿  Building 'MyDriver1' with toolset 'WindowsKernelModeDriver10.0' and the 'Desktop' target platform.
+  Callouts.cpp
+C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\WFP\MyDriver1\Callouts.h(28,26): error C7525: inline variables require at least '/std:c++17'
+  (compiling source file 'Callouts.cpp')
+  
+  FastMutex.cpp
+  Globals.cpp
+C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\WFP\MyDriver1\Callouts.h(28,26): error C7525: inline variables require at least '/std:c++17'
+  (compiling source file 'Globals.cpp')
+  
+C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\WFP\MyDriver1\Globals.cpp(15,15): error C2514: 'Locker': class template cannot be constructed
+      C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\WFP\MyDriver1\Locker.h(4,8):
+      see declaration of 'Locker'
+  
+C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\WFP\MyDriver1\Globals.cpp(27,15): error C2514: 'Locker': class template cannot be constructed
+      C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\WFP\MyDriver1\Locker.h(4,8):
+      see declaration of 'Locker'
+  
+C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\WFP\MyDriver1\Globals.cpp(33,15): error C2514: 'Locker': class template cannot be constructed
+      C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\WFP\MyDriver1\Locker.h(4,8):
+      see declaration of 'Locker'
+  
+C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\WFP\MyDriver1\Globals.cpp(38,15): error C2514: 'Locker': class template cannot be constructed
+      C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\WFP\MyDriver1\Locker.h(4,8):
+      see declaration of 'Locker'
+  
+  Main.cpp
+C:\Users\Rivershen\OneDrive\Desktop\Kernel_Training\WFP\MyDriver1\Callouts.h(28,26): error C7525: inline variables require at least '/std:c++17'
+  (compiling source file 'Main.cpp')
+  
+  pch.cpp
+  Generating Code...

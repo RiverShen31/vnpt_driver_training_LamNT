@@ -1,0 +1,274 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6B3EEA2A-4826-4091-9A36-8F08FBAB7B5F}|..\\BlockProcess\\BlockProcess.vcxproj|C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\BlockProcess\\BlockProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|solutionrelative:pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|solutionrelative:Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Callouts.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|solutionrelative:Callouts.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Globals.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|solutionrelative:Globals.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\FastMutex.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|solutionrelative:FastMutex.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Callouts.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|solutionrelative:Callouts.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Globals.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|solutionrelative:Globals.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Main.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|solutionrelative:Main.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\ProcNetFilterPublic.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|solutionrelative:ProcNetFilterPublic.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|solutionrelative:pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Locker.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|solutionrelative:Locker.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\FastMutex.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{D4045623-E5AA-414F-BF69-120A180190C4}|MyDriver1.vcxproj|solutionrelative:FastMutex.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B3EEA2A-4826-4091-9A36-8F08FBAB7B5F}|..\\BlockProcess\\BlockProcess.vcxproj|C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\BlockProcess\\pch.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6B3EEA2A-4826-4091-9A36-8F08FBAB7B5F}|..\\BlockProcess\\BlockProcess.vcxproj|C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\BlockProcess\\pch.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BlockProcess.cpp",
+              "DocumentMoniker": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\BlockProcess\\BlockProcess.cpp",
+              "RelativeDocumentMoniker": "..\\BlockProcess\\BlockProcess.cpp",
+              "ToolTip": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\BlockProcess\\BlockProcess.cpp",
+              "RelativeToolTip": "..\\BlockProcess\\BlockProcess.cpp",
+              "ViewState": "AgIAABIBAAAAAAAAAAAiwCoBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-25T09:22:51.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "pch.h",
+              "DocumentMoniker": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\BlockProcess\\pch.h",
+              "RelativeDocumentMoniker": "..\\BlockProcess\\pch.h",
+              "ToolTip": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\BlockProcess\\pch.h",
+              "RelativeToolTip": "..\\BlockProcess\\pch.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-25T09:24:40.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "pch.cpp",
+              "DocumentMoniker": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\BlockProcess\\pch.cpp",
+              "RelativeDocumentMoniker": "..\\BlockProcess\\pch.cpp",
+              "ToolTip": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\BlockProcess\\pch.cpp",
+              "RelativeToolTip": "..\\BlockProcess\\pch.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-25T09:25:15.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Main.cpp",
+              "RelativeDocumentMoniker": "Main.cpp",
+              "ToolTip": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Main.cpp",
+              "RelativeToolTip": "Main.cpp",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAgwJYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-28T09:10:11.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "pch.h",
+              "DocumentMoniker": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\pch.h",
+              "RelativeDocumentMoniker": "pch.h",
+              "ToolTip": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\pch.h",
+              "RelativeToolTip": "pch.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-28T09:10:41.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Main.h",
+              "DocumentMoniker": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Main.h",
+              "RelativeDocumentMoniker": "Main.h",
+              "ToolTip": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Main.h",
+              "RelativeToolTip": "Main.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-28T09:11:16.013Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Locker.h",
+              "DocumentMoniker": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Locker.h",
+              "RelativeDocumentMoniker": "Locker.h",
+              "ToolTip": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Locker.h",
+              "RelativeToolTip": "Locker.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-28T09:12:20.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "pch.cpp",
+              "DocumentMoniker": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\pch.cpp",
+              "RelativeDocumentMoniker": "pch.cpp",
+              "ToolTip": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\pch.cpp",
+              "RelativeToolTip": "pch.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-28T09:12:55.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProcNetFilterPublic.h",
+              "DocumentMoniker": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\ProcNetFilterPublic.h",
+              "RelativeDocumentMoniker": "ProcNetFilterPublic.h",
+              "ToolTip": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\ProcNetFilterPublic.h",
+              "RelativeToolTip": "ProcNetFilterPublic.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-28T09:14:44.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Globals.h",
+              "DocumentMoniker": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Globals.h",
+              "RelativeDocumentMoniker": "Globals.h",
+              "ToolTip": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Globals.h",
+              "RelativeToolTip": "Globals.h",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-28T09:16:18.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FastMutex.h",
+              "DocumentMoniker": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\FastMutex.h",
+              "RelativeDocumentMoniker": "FastMutex.h",
+              "ToolTip": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\FastMutex.h",
+              "RelativeToolTip": "FastMutex.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-28T09:16:56.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FastMutex.cpp",
+              "DocumentMoniker": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\FastMutex.cpp",
+              "RelativeDocumentMoniker": "FastMutex.cpp",
+              "ToolTip": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\FastMutex.cpp",
+              "RelativeToolTip": "FastMutex.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-28T09:17:20.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Globals.cpp",
+              "DocumentMoniker": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Globals.cpp",
+              "RelativeDocumentMoniker": "Globals.cpp",
+              "ToolTip": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Globals.cpp",
+              "RelativeToolTip": "Globals.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-28T09:24:06.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Callouts.h",
+              "DocumentMoniker": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Callouts.h",
+              "RelativeDocumentMoniker": "Callouts.h",
+              "ToolTip": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Callouts.h",
+              "RelativeToolTip": "Callouts.h",
+              "ViewState": "AgIAAA4AAAAAAAAAAAArwBsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-28T09:48:32.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Callouts.cpp",
+              "DocumentMoniker": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Callouts.cpp",
+              "RelativeDocumentMoniker": "Callouts.cpp",
+              "ToolTip": "C:\\Users\\Rivershen\\OneDrive\\Desktop\\Kernel_Training\\WFP\\MyDriver1\\Callouts.cpp",
+              "RelativeToolTip": "Callouts.cpp",
+              "ViewState": "AgIAAGwAAAAAAAAAAAAgwIQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-28T09:51:22.828Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
